@@ -1,0 +1,9 @@
+# Bamazon Storefront  
+## A CLI Interface using Node.JS and MySQL
+Bamazon is a fictional storefront Node.JS application where customers can search through a product catalog and purchase items for sale and managers are able to review product inventory, update product inventory as well as add new items to the product inventory. This app uses MySQL and Inquirer as dependencies.  
+### bamazonCustomer.js
+In the bamazonCustomer.js file, a fictional customer can view all products available for purchase through the Bamazon store.  Using Inquirer prompts, the user selects an item for purchase and then the quantity they wish to purchase.  If the desired quantity is greater than the amount currently in stock, the user is informed there is an insufficient quantity for purchase and asked if they wish to continue shopping.  If they confirm yes, they are looped back to the beginning shopping screen.  If they select no, a message appears thanking the user for shopping at Bamazon and the application ends.
+When a user successfully purchases an item, a prompt is shown to the user thanking them for their purchase and displaying the total amount of their transaction.  Concurrently, the MySQL database is updated to show the change in quantity to the stock inventory.
+###bamazonManager.js
+In the bamazonManager.js file, a user is able to select from four options: view products for sale, view only products with a low inventory, update the stock quantity of a product or add an entirely new product to the inventory.  
+Any changes to the inventory made by the user are reflected in the MySQL database.  Upon completion of an action, the user is then prompted if they wish to perform an additional task, wherein the app starts over.  If the user does not wish to perform any additional tasks, a goodbye message appears and the program ends.
